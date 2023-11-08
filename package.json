@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "three": "^0.158.0"
+  },
+  "name": "discover-three-js",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "repository": "https://github.com/ClemMoreau/discover-three-js.git",
+  "author": "ClemMoreau",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.5.0"
+  }
+}
