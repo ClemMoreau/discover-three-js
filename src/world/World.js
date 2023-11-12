@@ -20,12 +20,17 @@ class World {
     container.append(renderer.domElement);
 
     const cube = createCube();
-    cube.position.set(-2, 0, 0);
     const alphacube = createBasicCube();
-    alphacube.position.set(2, 0, 0);
+    
+    alphacube.scale.set(0.75, 0.75, 0.75);
+    alphacube.position.set(2.5, 0, 2);
+
+    cube.rotation.set(Math.PI * 2, Math.PI * 0.25, 0);
+    
     const light = createLight();
 
-    scene.add(cube, light, alphacube);
+    cube.add(alphacube);
+    scene.add(cube, light);
 
     const resizer = new Resizer(container, camera, renderer);
   }
