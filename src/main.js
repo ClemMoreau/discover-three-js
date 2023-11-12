@@ -1,4 +1,4 @@
-import { World } from '/src/world/World.js';
+import { World } from './world/World.js';
 
 function main() {
   // Get a reference to the container element
@@ -8,7 +8,7 @@ function main() {
   const world = new World(container);
 
   // 2. Render the scene
-  world.render();
+  world.start();
 }
 
 main();

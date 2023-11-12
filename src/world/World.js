@@ -2,6 +2,7 @@ import { createCamera } from './components/camera.js';
 import { createBasicCube, createCube } from './components/cube.js';
 import { createLight } from './components/light.js';
 import { createScene } from './components/scene.js';
+import { Loop } from './systems/Loop.js';
 
 import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/Resizer.js';
@@ -11,31 +12,41 @@ import { Resizer } from './systems/Resizer.js';
 let camera;
 let renderer;
 let scene;
+let loop; 
 
 class World {
   constructor(container) {
     camera = createCamera();
     scene = createScene();
     renderer = createRenderer();
+    loop = new Loop(camera, scene, renderer);
+
     container.append(renderer.domElement);
 
     const cube = createCube();
-    cube.position.set(-2, 0, 0);
-    const alphacube = createBasicCube();
-    alphacube.position.set(2, 0, 0);
     const light = createLight();
 
-    scene.add(cube, light, alphacube);
+    loop.updatables.push(cube);
+
+    scene.add(cube, light);
 
     const resizer = new Resizer(container, camera, renderer);
-    resizer.onResize = () => {
-      this.render();
-    };
+    // resizer.onResize = () => {
+    //   this.render();
+    // };
   }
 
   render() {
     // draw a single frame
     renderer.render(scene, camera);
+  }
+
+  start() {
+    loop.start();
+  }
+
+  stop() {
+    loop.stop();
   }
 }
 
