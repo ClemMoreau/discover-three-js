@@ -12,7 +12,7 @@ function createCamera() {
   camera.position.set(0, 0, 10);
   camera.tick = (delta) => {
 
-    camera.position.z += delta;
+    // camera.position.z += delta;
   }
 
   return camera;

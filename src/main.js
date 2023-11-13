@@ -9,7 +9,7 @@ function main() {
   const world = new World(container);
 
   // 2. Render the scene
-  // world.start();
+  world.start();
 
   const button = document.querySelector('#start-button');
   button.addEventListener('click', () => {

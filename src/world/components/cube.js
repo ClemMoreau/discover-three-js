@@ -21,10 +21,10 @@ function createCube() {
     cube.rotation.x += radiansPerSecond * delta;
     cube.rotation.y += radiansPerSecond * delta;
 
-    cube.position.y += 2 * delta * (up ? 1 : -1);
-    cube.position.x += 2 * delta * (up ? 1 : -1);
+    // cube.position.y += 2 * delta * (up ? 1 : -1);
+    // cube.position.x += 2 * delta * (up ? 1 : -1);
 
-    up = cube.position.y >= 2 ? false : cube.position.y <= -2 ? true : up;
+    // up = cube.position.y >= 2 ? false : cube.position.y <= -2 ? true : up;
   }
 
   return cube;
