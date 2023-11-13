@@ -33,4 +33,9 @@ body {
     */
     background-color: skyblue;
   }
-  
+
+  #start-button {
+    position: relative;
+    z-index: 12;
+    color: black;
+  }

@@ -26,7 +26,7 @@ class World {
     const cube = createCube();
     const light = createLight();
 
-    loop.updatables.push(cube);
+    loop.updatables.push(cube, camera, light);
 
     scene.add(cube, light);
 
