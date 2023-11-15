@@ -1,7 +1,5 @@
 import { 
   BoxGeometry, 
-  BufferGeometry,
-  BufferAttribute,
   Mesh, 
   MeshStandardMaterial, 
   MeshBasicMaterial, 
@@ -12,7 +10,7 @@ import {
 function createMaterial() {
   const textureLoader = new TextureLoader();
 
-  const texture = textureLoader.load("/assets/textures/uv-test-col.png");
+  const texture = textureLoader.load("/assets/textures/uv-test-bw.png");
 
   const material = new MeshStandardMaterial({ map: texture });
   // material.color.set("blue");
@@ -39,11 +37,6 @@ function createCube() {
     cube.rotation.z += radiansPerSecond * delta;
     cube.rotation.x += radiansPerSecond * delta;
     cube.rotation.y += radiansPerSecond * delta;
-
-    // cube.position.y += 2 * delta * (up ? 1 : -1);
-    // cube.position.x += 2 * delta * (up ? 1 : -1);
-
-    // up = cube.position.y >= 2 ? false : cube.position.y <= -2 ? true : up;
   }
 
   return cube;
