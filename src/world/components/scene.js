@@ -1,4 +1,7 @@
-import { Color, Scene } from 'three';
+import { 
+  Color,
+  Scene
+ } from 'three';
 
 function createScene() {
   const scene = new Scene();

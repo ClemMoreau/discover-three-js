@@ -27,11 +27,11 @@ class World {
     const controls = createControls(camera, renderer.domElement);
 
     const cube = createCube();
-    const light = createLight();
+    const {light, ambientLight} = createLight();
 
     loop.updatables.push(controls);
 
-    scene.add(cube, light);
+    scene.add(cube, light, ambientLight);
 
     controls.addEventListener('change', () => {
       this.render();

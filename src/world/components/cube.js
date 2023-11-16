@@ -34,9 +34,9 @@ function createCube() {
   let up = true;
   
   cube.tick = (delta) => {
-    cube.rotation.z += radiansPerSecond * delta;
-    cube.rotation.x += radiansPerSecond * delta;
-    cube.rotation.y += radiansPerSecond * delta;
+    // cube.rotation.z += radiansPerSecond * delta;
+    // cube.rotation.x += radiansPerSecond * delta;
+    // cube.rotation.y += radiansPerSecond * delta;
   }
 
   return cube;
