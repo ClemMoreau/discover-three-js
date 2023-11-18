@@ -33,9 +33,3 @@ body {
     */
     background-color: skyblue;
   }
-
-  #move-button, #go-button {
-    position: relative;
-    z-index: 12;
-    color: black;
-  }
