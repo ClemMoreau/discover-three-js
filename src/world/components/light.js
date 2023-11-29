@@ -9,10 +9,10 @@ function createLight() {
     const ambientLight = new HemisphereLight(
         'white', // bright sky color
         'darkslategray', // dim ground color
-        15, // intensity
+        5, // intensity
     );
     
-    const light = new DirectionalLight('white', 25);
+    const light = new DirectionalLight('white', 5);
     light.position.set(10, 10, 10);
     
     return {light, ambientLight};
