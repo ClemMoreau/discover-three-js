@@ -42,6 +42,7 @@ class World {
 
     controls.target.copy(parrot.position);
 
+    loop.updatables.push(parrot, flamingo, stork);
     scene.add(parrot, flamingo, stork);
   }
 
